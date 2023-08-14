@@ -3,9 +3,31 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-XLS_file_path3 := A_WorkingDir . "TEST.xlsx"
+
+; 엑셀 파일 열어놓고 작업하기
+
+; XLS_file_path3 := A_WorkingDir . "TEST.xlsx"
+; Xl := ComObjCreate("Excel.Application")
+; Xl := ComObjActive("Excel.Application")
+
+; 엑셀파일 선택창 열기 예제
+
+; FileSelectFile, path
+; FileSelectFile, path ,,D:/aaa_DownLoad/,,*.xlsx
+; if path = 
+; 	ExitApp
+; Xl := ComObjCreate("Excel.Application")
+; Xl.Workbooks.Open(path)
+; Xl.Visible := True
+
+; test.xlsx 만 지정해서 열기
+path := "D:/aaa_DownLoad/test.xlsx"
 Xl := ComObjCreate("Excel.Application")
-Xl := ComObjActive("Excel.Application")
+Xl.Workbooks.Open(path)
+Xl.Visible := True
+
+
+
 
 Gui Add, Text, x32 y10 w120 h23 +0x200, 거래처 코드
 Gui Add, Text, x32 y56 w120 h23 +0x200, 시작 행 번호
