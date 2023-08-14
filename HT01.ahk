@@ -25,6 +25,7 @@ GuiClose:
 Btn:
 	Gui, Submit, NoHide
 	WinActivate ahk_class Chrome_WidgetWin_1
+; 윈도우 고정하기
     send +^{NumpadAdd}
 
 	;HT01 매출 전표 입력
