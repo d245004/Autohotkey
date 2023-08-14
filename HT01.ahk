@@ -42,6 +42,8 @@ Return
 
 GuiEscape:
 GuiClose:
+	Xl.activeWorkbook.save()
+	Xl.Quit
     ExitApp
 
 Btn:
@@ -121,6 +123,15 @@ Btn:
 
 ^Space::Pause
 
-^PgUp::Reload
+^PgUp::
+	Xl.Application.DisplayAlerts := False
+	Xl.ActiveWorkbook.Close
+	Xl.Visible := False
+	Xl.Quit
+	Reload
 
-^PGDN::ExitApp
+^PGDN::
+	Xl.ActiveWorkbook.save()
+	Xl.Quit
+	ExitApp
+
