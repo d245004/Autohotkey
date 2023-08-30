@@ -39,11 +39,11 @@
                 sleep,300
 
                 Click,1321,311
-                Sleep,500
+                Sleep,1000
 
-                click,847,169
+                click,845,177
 
-                sleep,500
+                sleep,1500
                 num -= 45
                 aa -= 1
                 Continue

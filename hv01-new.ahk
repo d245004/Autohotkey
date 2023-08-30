@@ -1,3 +1,6 @@
+#SingleInstance, Force
+SendMode Input
+SetWorkingDir, %A_ScriptDir%
 CoordMode, Mouse, Screen
 
 num=2
